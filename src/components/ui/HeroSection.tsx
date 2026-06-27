@@ -10,48 +10,66 @@ const CALENDLY_URL =
 const container = {
   hidden: {},
   show: {
-    transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.05,
-    },
+    transition: { staggerChildren: 0.13, delayChildren: 0.1 },
   },
 };
 
 const item = {
-  hidden: { opacity: 0, y: 32 },
+  hidden: { opacity: 0, y: 30 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring" as const, stiffness: 55, damping: 18 },
+    transition: { type: "spring" as const, stiffness: 50, damping: 16 },
   },
 };
 
 export function HeroSection() {
   return (
-    <section className="bg-white py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-12 lg:grid-cols-[1fr_500px] lg:items-center">
+    <section className="relative overflow-hidden bg-white py-24 sm:py-32">
+      {/* Subtle background grid */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-25"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white via-white/85 to-white"
+      />
+
+      {/* Floating orbs */}
+      <motion.div
+        aria-hidden="true"
+        animate={{ y: [0, -18, 0], opacity: [0.06, 0.12, 0.06] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        className="pointer-events-none absolute right-[8%] top-[15%] h-72 w-72 rounded-full bg-secondary blur-3xl"
+      />
+      <motion.div
+        aria-hidden="true"
+        animate={{ y: [0, 14, 0], opacity: [0.04, 0.08, 0.04] }}
+        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        className="pointer-events-none absolute left-[5%] bottom-[20%] h-56 w-56 rounded-full bg-secondary blur-3xl"
+      />
+
+      <div className="relative mx-auto max-w-7xl px-6">
+        <div className="grid gap-14 lg:grid-cols-[1fr_460px] lg:items-center">
           {/* Left: content */}
           <motion.div variants={container} initial="hidden" animate="show">
             <motion.h1
               variants={item}
-              className="font-display text-6xl font-bold leading-none tracking-tight text-primary sm:text-7xl lg:text-8xl"
+              className="font-display text-5xl font-bold leading-[1.08] tracking-tight text-primary sm:text-6xl lg:text-7xl"
             >
-              Teclaws
+              Enterprise
+              <br />
+              <span className="text-secondary">Technology</span>
+              <br />
+              That Performs
             </motion.h1>
 
             <motion.p
               variants={item}
-              className="mt-5 max-w-2xl font-display text-xl font-medium text-foreground/75 sm:text-2xl"
+              className="mt-7 max-w-lg text-base leading-relaxed text-muted sm:text-lg"
             >
-              Enterprise Technology Solutions for Businesses Worldwide
-            </motion.p>
-
-            <motion.p
-              variants={item}
-              className="mt-5 max-w-lg text-base leading-relaxed text-muted"
-            >
-              Cloud infrastructure, cybersecurity, software development, and DevOps services, built to the standards your business demands.
+              Cloud infrastructure, cybersecurity, software development, and DevOps services built to the standards your business demands.
             </motion.p>
 
             <motion.div
@@ -67,9 +85,12 @@ export function HeroSection() {
                   href={CALENDLY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-md bg-secondary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-secondary-dark"
+                  className="inline-flex items-center gap-2 rounded-md bg-secondary px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-secondary-dark"
                 >
-                  Book Consultation
+                  Book a Free Consultation
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+                  </svg>
                 </a>
               </motion.div>
               <motion.div
@@ -79,29 +100,40 @@ export function HeroSection() {
               >
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-md border border-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-secondary/40 hover:text-secondary"
+                  className="inline-flex items-center gap-2 rounded-md border border-border px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-secondary/40 hover:text-secondary"
                 >
-                  View Services
+                  Explore our services
                 </Link>
               </motion.div>
             </motion.div>
           </motion.div>
 
-          {/* Right: logo */}
+          {/* Right: logo with glow */}
           <motion.div
             className="hidden lg:flex lg:items-center lg:justify-center"
-            initial={{ opacity: 0, x: 40, scale: 0.96 }}
+            initial={{ opacity: 0, x: 40, scale: 0.95 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ type: "spring", stiffness: 45, damping: 18, delay: 0.35 }}
+            transition={{ type: "spring", stiffness: 45, damping: 18, delay: 0.4 }}
           >
-            <Image
-              src="/the-claws.png"
-              alt="Teclaws"
-              width={560}
-              height={560}
-              className="object-contain"
-              priority
-            />
+            <div className="relative">
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 -z-10 scale-110 rounded-full bg-secondary/8 blur-3xl"
+              />
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <Image
+                  src="/the-claws.png"
+                  alt="Teclaws"
+                  width={460}
+                  height={460}
+                  className="object-contain"
+                  priority
+                />
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>

@@ -23,7 +23,7 @@ async function callDeepSeek(messages: Message[]): Promise<string> {
       { role: "system", content: buildSystemPrompt() },
       ...toDeepSeekMessages(messages),
     ],
-    max_tokens:   700,
+    max_tokens:   1200,
     temperature:  0.65,
     top_p:        0.9,
     stream:       false,
