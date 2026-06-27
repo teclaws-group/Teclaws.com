@@ -1,2 +1,1 @@
-# Teclaws.com
-Our official website
+#Teclaws
