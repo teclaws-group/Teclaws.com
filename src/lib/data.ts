@@ -12,6 +12,7 @@ export const CONTACT = {
   email:    "teclawsgroup@gmail.com",
   phone:    "+254 141 414 255",
   whatsapp: "https://wa.me/254141414255",
+  facebook: "https://www.facebook.com/people/Teclaws/61574743811709/",
   linkedin: "https://www.linkedin.com/company/teclaws",
   instagram: "https://www.instagram.com/teclawsgroup/",
   calendly: "https://calendly.com/teclawsgroup",
