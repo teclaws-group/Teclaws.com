@@ -129,8 +129,6 @@ export function HeroSection() {
                   alt="Teclaws"
                   width={460}
                   height={460}
-                  className="object-contain"
-                  style={{ width: "460px", height: "auto" }}
                   priority
                 />
               </motion.div>

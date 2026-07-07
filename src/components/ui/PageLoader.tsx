@@ -71,8 +71,6 @@ export function PageLoader() {
               alt="Teclaws"
               width={64}
               height={64}
-              className="object-contain"
-              style={{ width: "64px", height: "auto" }}
               priority
             />
             <p className="font-display text-xl font-bold tracking-tight text-white">
