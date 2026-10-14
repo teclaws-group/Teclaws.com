@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ChatBubble } from "@/components/ChatBubble";
 import { PageLoader } from "@/components/ui/PageLoader";
+import { PostHogAnalytics } from "@/components/analytics/PostHogAnalytics";
 
 const sans = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -121,6 +122,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <ChatBubble />
+        <PostHogAnalytics />
       </body>
     </html>
   );

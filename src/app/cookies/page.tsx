@@ -64,7 +64,7 @@ export default function CookiesPage() {
 
           <Section title="1. What Are Cookies?">
             <p>
-              Cookies are small text files placed on your device when you visit a website. They allow the site to remember information about your visit — such as your preferred language or session state — making your next visit easier and the site more useful to you.
+              Cookies are small text files placed on your device when you visit a website. They allow the site to remember information about your visit - such as your preferred language or session state - making your next visit easier and the site more useful to you.
             </p>
             <p>
               In addition to cookies, we may use similar technologies such as web beacons, pixel tags, and local storage for similar purposes. All of these are referred to collectively as &ldquo;cookies&rdquo; in this policy.

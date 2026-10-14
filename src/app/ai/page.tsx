@@ -99,10 +99,10 @@ export default function AIPage() {
             <Reveal>
               <span className="text-xs font-semibold uppercase tracking-widest text-secondary">LLM Integration and RAG</span>
               <h2 className="mt-4 font-display text-3xl font-bold leading-tight tracking-tight text-primary sm:text-4xl">
-                Connect Your Organisation's Knowledge to Powerful Language Models
+                Connect Your Organisation&apos;s Knowledge to Powerful Language Models
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted">
-                Large language models like GPT-4 and Claude are extraordinarily capable but they do not know anything about your business, your documents, your policies, or your data. Retrieval-Augmented Generation (RAG) solves this. By connecting a language model to a vector database containing your organisation's knowledge, we create systems that can accurately answer questions, generate content, and make decisions based on your specific context.
+                Large language models like GPT-4 and Claude are extraordinarily capable but they do not know anything about your business, your documents, your policies, or your data. Retrieval-Augmented Generation (RAG) solves this. By connecting a language model to a vector database containing your organisation&apos;s knowledge, we create systems that can accurately answer questions, generate content, and make decisions based on your specific context.
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted">
                 We build RAG systems for knowledge management, internal document search, customer support automation, compliance document analysis, and technical documentation assistance. Every system includes citation of source documents, so users can verify the information they receive rather than trusting a black box.

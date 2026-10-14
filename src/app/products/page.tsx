@@ -6,11 +6,11 @@ import { PRODUCTS } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Products | Teclaws",
   description:
-    "Explore purpose-built products from Teclaws, including Neer — the complete POS and ERP for businesses to manage sales, inventory, eTIMS, M-Pesa, and staff.",
+    "Explore purpose-built products from Teclaws, including Neer - the complete POS and ERP for businesses to manage sales, inventory, eTIMS, M-Pesa, and staff.",
   openGraph: {
     title: "Products | Teclaws",
     description:
-      "Purpose-built products designed to solve real business challenges. Explore Neer — the complete POS and ERP for all businesses.",
+      "Purpose-built products designed to solve real business challenges. Explore Neer - the complete POS and ERP for all businesses.",
     url: "https://teclaws.com/products",
     images: [{ url: "/the-teclaw-logo.png", width: 800, height: 800, alt: "Teclaws Products" }],
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Products | Teclaws",
     description:
-      "Explore Teclaws products, including Neer — the complete POS and ERP for all businesses.",
+      "Explore Teclaws products, including Neer - the complete POS and ERP for all businesses.",
   },
   alternates: { canonical: "https://teclaws.com/products" },
 };
